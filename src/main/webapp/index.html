@@ -1,56 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CI/CD in DevOps</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .header {
-            background-color: #3498db;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-        }
-        .content {
-            margin: 2rem;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .footer {
-            text-align: center;
-            margin-top: 2rem;
-            padding: 1rem;
-            background-color: #3498db;
-            color: white;
-            font-size: 1.2rem;
-        }
-        .image {
-            text-align: center;
-            margin-top: 2rem;
-        }
-    </style>
+    <title>CI/CD Pipeline Project</title>
 </head>
 <body>
-    <div class="header">
-        <h1>Understanding CI/CD in DevOps</h1>
+    <h1>Welcome to the CI/CD Pipeline Project</h1>
+    <p>This is a simple example of a CI/CD pipeline implemented within a single HTML file.</p>
+    
+    <!-- Placeholder for CI/CD pipeline status -->
+    <div id="pipelineStatus">
+        <p>CI/CD Pipeline Status: <span id="status">Not started</span></p>
     </div>
     
-    <div class="content">
-        <p>Continuous Integration and Continuous Deployment (CI/CD) is a fundamental practice in DevOps.</p>
-        <p>CI involves the automatic integration of code changes into a shared repository, followed by automated builds and tests. This helps identify issues early.</p>
-        <p>CD extends CI by automating the deployment of validated code changes to production-like environments, ensuring frequent and reliable releases.</p>
-        <p>CI/CD pipelines streamline development, improve collaboration, and deliver software with speed and quality.</p>
-    </div>
-
-    <div class="footer">
-        Thanks for reading! - Mathew Joseph
-    </div>
+    <!-- Buttons to trigger CI/CD actions -->
+    <button onclick="startCIPipeline()">Start CI Pipeline</button>
+    <button onclick="startCDPipeline()">Start CD Pipeline</button>
+    
+    <script>
+        // Simulate CI and CD pipeline actions
+        function startCIPipeline() {
+            document.getElementById('status').innerText = 'Running CI...';
+            // Simulate CI actions (e.g., build, test)
+            setTimeout(function() {
+                document.getElementById('status').innerText = 'CI Succeeded';
+            }, 2000);
+        }
+        
+        function startCDPipeline() {
+            document.getElementById('status').innerText = 'Running CD...';
+            // Simulate CD actions (e.g., deploy)
+            setTimeout(function() {
+                document.getElementById('status').innerText = 'CD Succeeded';
+            }, 2000);
+        }
+    </script>
 </body>
 </html>
 
